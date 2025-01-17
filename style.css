@@ -1,0 +1,638 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Inter', sans-serif;
+    background-color: #b89a49;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #2f615e;
+    color: #E9DEB0;
+    padding: 1rem 0;
+    text-align:center;
+    font-size: 1.2rem; 
+    margin-bottom: 1rem;
+    font-family:'Inter', sans-serif;
+
+}
+
+
+/* Estilo geral do menu */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+/* Estilo do link do menu */
+header nav ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #E9DEB0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+/* Estilo da caixa do ícone */
+.menu-icon {
+    background-color: #A73E2B; /* Cor de fundo da caixa */
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-item i {
+    font-size: 2rem;
+    color: #FDFBF1; /* Cor do ícone */
+}
+
+/* Efeito ao passar o mouse sobre o link */
+header nav ul li a:hover {
+    color: #D07E0E; /* Cor do texto ao passar o mouse */
+    transform: translateY(-5px); /* Levanta o item ligeiramente */
+}
+
+/* Efeito ao passar o mouse sobre a caixa do ícone */
+.menu-item:hover .menu-icon {
+    background-color: #D07E0E; /* Muda a cor de fundo da caixa */
+    transform: translateY(-5px); /* Levanta o ícone */
+}
+
+.menu-item:hover i {
+    color: #FDFBF1; /* Muda a cor do ícone */
+}
+
+/* Estilo do ícone quando ativo */
+.menu-item.active .menu-icon {
+    background-color: #36802D;
+}
+
+.menu-item.active i {
+    color: #FDFBF1;
+}
+
+
+
+/* Seção Principal */
+.intro {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: flex-start; /* Alinha à esquerda */
+    padding: 2rem; /* Espaçamento interno */
+    /*background: url('intro1.png') no-repeat center center/cover;*/
+    color: #482C21; /* Contraste adequado com o fundo */
+    height: 75vh; /* Altura da tela */
+    text-align: left; /* Garante que o texto seja alinhado à esquerda */
+}
+
+#typed-text {
+    font-size: 1.2rem;
+    color: #E9DEB0;
+    overflow: hidden; /* Oculta o texto excedente */
+    border-right: 2px solid #E9DEB0; /* Cursor de digitação */
+    animation: blink-caret 0.7s steps(1) infinite; /* Animação do cursor */
+}
+
+@keyframes blink-caret {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: #E9DEB0;
+    }
+}
+
+
+.intro .container {
+    max-width: 600px; /* Limita a largura para facilitar leitura */
+    margin-left: 2rem; /* Espaço da borda esquerda */
+    background-color: #a73e2b; /* Fundo com leve opacidade */
+    padding: 1.3rem; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    animation: slideInFromLeft 1.2s ease-out; /* Aplica a animação */
+    animation-delay: 0.5s; 
+    opacity: 0; /* Garante que começa invisível antes da animação */
+    animation-fill-mode: forwards; 
+}
+
+.intro h2 {
+    font-size: 2.8rem;
+    color: #fdfbf7; /* Destaque do título */
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.intro p {
+    font-size: 1rem;
+    color: #E9DEB0; /* Texto mais escuro para contraste */
+    line-height: 1.8; /* Espaçamento entre linhas */
+    text-align: center;
+}
+
+/* Caixa de apresentação da intro */
+#home .container {
+    background-color: #A73E2B; /* Cor inicial da caixa */
+    padding: 20px;
+    border-radius: 8px;
+    color: #F0F0F0;
+    transition: all 0.3s ease; /* Transição suave para o hover */
+    max-width: 50%;
+}
+
+/* Efeito hover */
+#home .container:hover {
+    background-color: #872F22; /* Cor ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+    transform: translateY(-5px); /* Leve movimento para cima */
+}
+
+/* Títulos e descrições */
+#home .container h2 {
+    margin: 0 0 10px;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+#home .container p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+
+
+
+/* Ferramentas e Habilidades */
+.skills {
+    background-color: #2f615e !important;
+    padding: 3.5rem 0;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2rem; /* Tamanho do título */
+    color: #ffffff;    /* Cor do título */
+    margin-bottom: 1.5rem; /* Espaço entre o título e os ícones */
+}
+
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3.0rem;
+}
+
+.skill-item {
+    background-color: #A73E2B;
+    color: #E9DEB0;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+
+
+.skills {
+    background-color: #2f615eb6;
+    padding: 1rem 0;
+    text-align: center;
+    
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.skill-item {
+    background-color: #A73E2B;
+    border-radius: 8px;
+    padding: 2.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 109px;
+    height: 100px;
+}
+
+.skill-item i {
+    font-size: 1.9rem;
+    color: #ffffff;
+    margin-bottom: 0.2rem;
+}
+
+.skill-item p {
+    font-size: 0rem;
+    color: #482C21;
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
+    background-color: #D07E0E;
+    color: #FDFBF1;
+}
+
+.skill-item:hover i {
+    color: #FDFBF1;
+}
+
+
+
+
+
+
+/* Efeitos de animação */
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro .intro-image {
+        max-width: 300px;
+        margin-top: 2rem;
+    }
+
+    .intro-description {
+        max-width: 90%;
+    }
+}
+
+
+/* Animação de fade-in e slide */
+@keyframes fadeInLeft {
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+}
+
+@keyframes slideInLeft {
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
+
+
+/* Projetos */
+.projects {
+    background-color: #b89a49;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.projects h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #2F615E;
+    
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card img {
+    width: 100%;
+    display: block;
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.project-card h3 {
+    margin: 1rem;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    margin: 0 1rem 1rem;
+    color: #ffffff;
+    flex-grow: 1; /* Faz o texto crescer para preencher o espaço */
+    font-size: 1.2rem;
+}
+
+/* Estilo para o link "Saiba Mais" */
+.btn-saiba-mais {
+    align-self: center; /* Alinha o botão ao centro */
+    display: inline-block;
+    background-color: #A73E2B;
+    color: #fdfcf8;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-saiba-mais:hover {
+    background-color: #D07E0E;
+}
+
+
+
+
+
+
+
+
+.tooltip {
+    position: absolute;
+    background-color: #482C21;
+    color: #E9DEB0;
+    padding: 0.7rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill-item:hover .tooltip {
+    opacity: 1;
+}
+
+.skill-bar:hover::after {
+    content: attr(data-level);
+    position: absolute;
+    right: 10px;
+    top: -25px;
+    background-color: #A73E2B;
+    color: #FDFBF1;
+    padding: 0.30rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+
+
+
+
+/* Seção de Contato */
+.contact {
+    background-color: #b89a49;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 1.2rem; 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+}
+
+/* Estilo para os ícones de redes sociais */
+.contact .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Alinha os ícones no centro */
+    gap: 1.5rem; /* Espaço entre os ícones */
+    margin-bottom: 2rem;
+}
+
+.contact .social-icon {
+    font-size: 3rem; /* Tamanho dos ícones */
+    color: #2F615E;
+    transition: color 0.3s;
+}
+
+.contact .social-icon:hover {
+    color: #D07E0E; /* Cor ao passar o mouse */
+}
+
+/* Estilo para o link do WhatsApp */
+.contact .social-icon.fa-whatsapp {
+    color: #25D366; /* Cor característica do WhatsApp */
+}
+
+.contact .social-icon.fa-whatsapp:hover {
+    color: #128C7E; /* Cor mais escura do WhatsApp ao passar o mouse */
+}
+
+.new-image {
+    max-height: 100%;
+    bottom: 0px;
+    transition: all 0.3s ease;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .new-image {
+        transition: all 0.3s ease;
+        max-height: 75%;
+        bottom: 0px;
+    }
+    #home .container p {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .social-icon {
+        font-size: 2rem;
+    }
+
+    .contact-buttons {
+        text-align: center;
+    }
+
+    .new-image {
+        transition: all 0.3s ease;
+        max-height: 50%;
+        bottom: 0px;
+    }
+
+    #home .container p {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    #home {
+        display: flex;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    #home .container{
+        max-height: 100%;
+        margin-top: 10px;
+        max-width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px
+        ;
+    }
+
+    #home .container p {
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+
+    
+}
+
+
+
+/* Adiciona rolagem suave para o site inteiro */
+html {
+    scroll-behavior:smooth;
+}
+
+/* Estilo para o botão Voltar ao Topo */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #A73E2B;
+    color: #E9DEB0;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;  /* Inicialmente escondido */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #D07E0E;
+}
+
+
+/* Inicialmente, as seções estão invisíveis */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);  /* Começar um pouco abaixo */
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+/* Quando a seção for visível, ela ganha a classe 'in-view' */
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);  /* Volta para a posição normal */
+}
+
+/* Rodapé */
+footer {
+    background-color: #2F615E;
+    color: #E9DEB0;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Animação para a caixa de entrada */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0; /* Começa invisível */
+        transform: translateX(-50px); /* Começa deslocado para a esquerda */
+    }
+    100% {
+        opacity: 1; /* Fica visível */
+        transform: translateX(0); /* Volta para a posição inicial */
+    }
+}
+
+
+
+
