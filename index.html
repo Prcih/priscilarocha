@@ -28,11 +28,19 @@
                     </a>
                 </li>
                 <li>
+                    <a href="#sobre" class="menu-item">
+                        <div class="menu-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        Sobre
+                    </a>
+                </li>
+                <li>
                     <a href="#skills" class="menu-item">
                         <div class="menu-icon">
                             <i class="fas fa-info-circle"></i>
                         </div>
-                        Sobre
+                        Skills
                     </a>
                 </li>
                 <li>
@@ -55,21 +63,33 @@
         </nav>
     </header>
 
-    <!-- Seção Principal -->
-    <section id="home" class="intro animate-on-scroll">
-        <div class="container">
-            <h2>Priscila Rocha</h2>
-            <p><strong>Desenvolvedora Full Stack | UI/UX Designer</strong></p>
-            <p style="text-align: justify;"><strong>Olá!</strong> Sou Priscila, estudante de Análise e Desenvolvimento de Sistemas, unindo a lógica de backend e infraestrutura com a sensibilidade do design de interfaces para criar experiências digitais completas, intuitivas e visualmente impactantes.</p>
+ <!-- Seção Principal -->
+    <section id="home" style="position: relative; min-height: 90vh; display: flex; align-items: center; padding: 60px 40px;">
+        <div class="container" style="max-width: 480px; margin-left: 20px; z-index: 5; position: relative; background: #a84332; padding: 35px 30px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);">
+            <h1 style="font-size: 2.5rem; margin: 0; color: #ffffff; font-weight: 700; line-height: 1.25; text-align: left;">Olá, mundo. Sou a Priscila.</h1>
         </div>
-        <img class="new-image" src="intro1.png" alt="Intro" style="width: auto; height: auto; margin-left: auto; position: absolute; right: 10px; z-index: -1;">
+        <img class="new-image" src="intro1.png" alt="Intro" style="max-width: 450px; height: auto; position: absolute; right: 20px; bottom: 0; z-index: 2; pointer-events: none;">
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="about animate-on-scroll">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <div class="about-content">
+                <p style="text-align: justify; line-height: 1.6;">
+                    <strong>Desenvolvedora Full Stack</strong> em formação pelo SENAC, com experiência prática prévia em desenvolvimento de software para pesquisa na UNESP. Atuei na criação de APIs REST e estruturação de back-ends com Java e Spring Boot. Uno conhecimentos técnicos em arquitetura MVC e banco de dados com princípios de UX/UI, buscando sempre entregar soluções digitais eficientes, funcionais e focadas na melhor experiência para o usuário.
+                </p>
+                <p style="text-align: justify; line-height: 1.6;">
+                    
+                </p>
+            </div>
+        </div>
     </section>
 
     <!-- Skills -->
     <section id="skills" class="skills animate-on-scroll">
         <div class="container">
             <h2>Skills & Tecnologias</h2>
-            <p></p>
             <div class="skills-list">
                 <div class="skill-item" data-level="Intermediário">
                     <h3><i class="fab fa-html5"></i> HTML5</h3>
@@ -96,22 +116,59 @@
                     </div>
                 </div>
                 <div class="skill-item" data-level="Intermediário">
+                    <h3><i class="fas fa-leaf"></i> Spring Boot & Hibernate</h3>
+                    <div class="skill-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-level="Intermediário">
+                    <h3><i class="fas fa-database"></i> SQL & Banco de Dados</h3>
+                    <div class="skill-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-level="Intermediário">
                     <h3><i class="fab fa-figma"></i> Figma / UX</h3>
                     <div class="skill-bar">
                         <div class="progress" style="width: 85%;"></div>
                     </div>
                 </div>
-                <div class="skill-item" data-level="Intermediário">
-                    <h3><i class="fab fa-linux"></i> Linux & Ferramentas</h3>
-                    <div class="skill-bar">
-                        <div class="progress" style="width: 75%;"></div>
-                    </div>
+                
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projetos -->
+    <!-- Seção de Soft Skills -->
+    <section id="soft-skills" class="soft-skills animate-on-scroll">
+        <div class="container">
+            <h2>Soft Skills</h2>
+            <div class="soft-skills-grid">
+                <div class="soft-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Criatividade</h3>
+                    <p>Inovação na concepção de interfaces e soluções visuais funcionais.</p>
+                </div>
+                <div class="soft-card">
+                    <i class="fas fa-search"></i>
+                    <h3>Curiosidade</h3>
+                    <p>Busca constante pelo aprendizado de novas tecnologias e aprofundamento técnico.</p>
+                </div>
+                <div class="soft-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Pensamento Crítico</h3>
+                    <p>Análise aprofundada de requisitos, usabilidade e arquitetura de sistemas.</p>
+                </div>
+                <div class="soft-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Raciocínio Lógico</h3>
+                    <p>Facilidade para estruturar algoritmos, fluxos e resolução de problemas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos Originais -->
     <section id="projects" class="projects">
         <div class="container">
             <h2>Projetos</h2>
@@ -137,12 +194,49 @@
             </div>
         </div>
     </section>
+
+    <!-- Seção de Experiência & Inovação -->
+    <section id="experience-highlights" class="projects animate-on-scroll">
+        <div class="container">
+            <h2>Experiência & Inovação</h2>
+            <div class="highlights-container" style="display: flex; flex-direction: column; gap: 20px; margin-top: 30px;">
+                
+                <!-- Card UNESP -->
+                <div class="highlight-card" style="background-color: #1b4d4f; border-left: 5px solid #a84332; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                        <i class="fas fa-graduation-cap" style="font-size: 24px; color: #fff;"></i>
+                        <h3 style="margin: 0; font-size: 1.25rem; color: #fff;">Desenvolvedora Full Stack (Bolsista UNESP)</h3>
+                    </div>
+                    <p style="text-align: justify; margin-bottom: 15px; color: #f1f1f1;">
+                        Atuação como bolsista UNESP em Desenvolvimento de Software para o Centro de Pesquisa e Psicologia Aplicada (CPPA) da Universidade Estadual Paulista “Júlio de Mesquita Filho” – UNESP, Câmpus de Assis. Foco em desenvolvimento Back-end e Front-end, além da elaboração de documentos voltados a requisitos funcionais e não funcionais.
+                    </p>
+                    <div class="tools-used" style="font-size: 0.9rem; color: #ddd; background: rgba(0, 0, 0, 0.2); padding: 10px; border-radius: 4px;">
+                        <strong style="color: #fff;">Ferramentas utilizadas:</strong> Java, JavaScript, HTML, CSS, SQL, SpringBoot, Model-View-Controller (MVC), Hibernate
+                    </div>
+                </div>
+
+                <!-- Card Habitae / Empreenda Senac -->
+                <div class="highlight-card" style="background-color: #1b4d4f; border-left: 5px solid #a84332; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                        <i class="fas fa-award" style="font-size: 24px; color: #fff;"></i>
+                        <h3 style="margin: 0; font-size: 1.25rem; color: #fff;">Habitae - Empreenda Senac (Semifinalista)</h3>
+                    </div>
+                    <p style="text-align: justify; margin-bottom: 15px; color: #f1f1f1;">
+                        Plataforma inovadora voltada a conectar viajantes com ecovilas, retiros de bem-estar e eco-lodges no Brasil. Selecionado e destaque na semifinal do programa Empreenda Senac.
+                    </p>
+                    <div class="tools-used" style="font-size: 0.9rem; color: #ddd; background: rgba(0, 0, 0, 0.2); padding: 10px; border-radius: 4px;">
+                        <strong style="color: #fff;">Foco:</strong> Inovação, Estratégia de Negócios e Sustentabilidade
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
     
     <!-- Seção Contato -->
     <section id="contact" class="contact animate-on-scroll">
         <div class="container">
             <h2>Contato</h2>
-            <p></p>
             <ul class="social-links">
                 <li><a href="https://www.instagram.com/prcilh/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/priscila-rocha-080659253/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a></li>
